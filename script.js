@@ -1,13 +1,3 @@
-// import PropTypes from 'prop-types';
-
-// var movie =
-//   {
-//     id: '1',
-//     title: 'Harry Potter',
-//     desc: 'Film o czarodzieju',
-//     poster: 'img/harry.jpg'
-//   }
-
 var movies = [
   {
     id: '1',
@@ -81,13 +71,9 @@ var moviesElements = movies.map(function(movie) {
   return React.createElement(Movie, {movie: movie, key: movie.id});
 });
 
-// var element = React.createElement(Movie, {movie: movie});
-
 var element = React.createElement( 'div', {},
                 React.createElement('h1', {}, 'Lista filmów'),
                 React.createElement('ul', {}, moviesElements)
               );
 
 ReactDOM.render(element, document.getElementById('app'));
-
-// debugger
